@@ -43,7 +43,7 @@
     document.title = `${store.name}｜店舗情報の入力`;
     status.textContent = store.enabled ? '現在公開されている情報を読み込みました。' : 'この店舗はまだ公開されていません。店舗情報を入力してください。';
     form.hidden = false;
-    document.getElementById('upload-link').href = `https://github.com/LimeBelleLiftLABOAreum26/belle-pages/upload/main/config/stores`;
+    document.getElementById('upload-link').href = `https://github.com/lime2002-esthetic/belle-pages/upload/main/config/stores`;
     const publicUrl = new URL('.',root);publicUrl.searchParams.set('store',id);
     document.getElementById('public-link').href = publicUrl.href;
     form.addEventListener('input', invalidate);
