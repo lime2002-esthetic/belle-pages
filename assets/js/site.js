@@ -6,15 +6,16 @@
     if (store.enabled !== true && !preview) throw new Error('この店舗のページは公開されていません。');
     BelleStore.validate(store);
     document.title = `${store.name}｜ハーブピーリング`;
-    const fields = { ...store, preview: `${store.name}｜店舗情報反映プレビュー` };
+    const fields = store;
     document.querySelectorAll('[data-field]').forEach(el => { el.textContent = fields[el.dataset.field]; });
+    document.querySelectorAll('[data-price]').forEach(el => { el.textContent = Number(store[el.dataset.price]).toLocaleString('ja-JP'); });
     const address = document.querySelector('[data-address]');
     address.replaceChildren();
     store.address.forEach((line, i) => {
       if (i) address.append(document.createElement('br'));
       address.append(document.createTextNode(line));
     });
-    document.querySelectorAll('[data-booking]').forEach(el => { el.href = store.bookingUrl; el.textContent = store.bookingLabel; });
+    document.querySelectorAll('[data-booking]').forEach(el => { el.href = store.bookingUrl; el.textContent = 'WEB予約はこちら'; });
     document.querySelectorAll('[data-phone]').forEach(el => {
       el.href = `tel:${BelleStore.phone(store.phone)}`;
       el.textContent = el.hasAttribute('data-phone-number') ? store.phone : `電話で予約　${store.phone}`;
@@ -23,7 +24,6 @@
     map.src = store.mapEmbedUrl;
     map.title = `${store.name}のGoogleマップ`;
     status.hidden = true;
-    document.querySelector('.preview').hidden = false;
     document.querySelector('main').hidden = false;
   }
   function fail(error) { status.hidden = false; status.textContent = error.message; status.setAttribute('role','alert'); }
