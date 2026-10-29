@@ -1,15 +1,17 @@
 {
   "enabled": false,
-  "name": "Belle〇〇店",
-  "bookingLabel": "〇〇店のWEB予約はこちら",
+  "name": "",
   "address": [
-    "都道府県・市区町村・番地",
-    "建物名・部屋番号"
+    ""
   ],
-  "access": "〇〇駅から徒歩〇分",
-  "hours": "00:00～00:00",
-  "closedDays": "定休日を入力",
+  "access": "",
+  "hours": "",
+  "closedDays": "",
   "bookingUrl": "",
   "mapEmbedUrl": "",
-  "phone": ""
+  "phone": "",
+  "courseLabel": "",
+  "firstPrice": null,
+  "regularPrice": null,
+  "repeatPrice": null
 }

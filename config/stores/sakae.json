@@ -1,7 +1,6 @@
 {
   "enabled": false,
   "name": "Belle栄店",
-  "bookingLabel": "栄店のWEB予約はこちら",
   "address": [
     ""
   ],
@@ -10,5 +9,9 @@
   "closedDays": "",
   "bookingUrl": "",
   "mapEmbedUrl": "",
-  "phone": ""
+  "phone": "",
+  "courseLabel": "",
+  "firstPrice": null,
+  "regularPrice": null,
+  "repeatPrice": null
 }
