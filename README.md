@@ -4,8 +4,8 @@
 
 | 店舗 | 店舗情報の入力画面 | お客様向けページ |
 | --- | --- | --- |
-| Belle栄店 | [栄店の入力画面](https://limebelleliftlaboareum26.github.io/belle-pages/editor/?store=sakae) | [栄店ページ](https://limebelleliftlaboareum26.github.io/belle-pages/?store=sakae)（初期状態は未公開） |
-| Belle志木店 | [志木店の入力画面](https://limebelleliftlaboareum26.github.io/belle-pages/editor/?store=shiki) | [志木店ページ](https://limebelleliftlaboareum26.github.io/belle-pages/) |
+| Belle栄店 | [栄店の入力画面](https://lime2002-esthetic.github.io/belle-pages/editor/?store=sakae) | [栄店ページ](https://lime2002-esthetic.github.io/belle-pages/?store=sakae)（初期状態は未公開） |
+| Belle志木店 | [志木店の入力画面](https://lime2002-esthetic.github.io/belle-pages/editor/?store=shiki) | [志木店ページ](https://lime2002-esthetic.github.io/belle-pages/) |
 
 ## 店舗の担当者がすること
 
@@ -22,7 +22,7 @@
 
 保存ファイルは、栄店なら `sakae.json`、志木店なら `shiki.json` です。ダウンロード先に同じ名前のファイルがあると `sakae (1).json` などに変わる場合があります。GitHubに登録する前に必ず `sakae.json` に戻してください。
 
-[担当者向けの詳しい操作ガイド](https://limebelleliftlaboareum26.github.io/belle-pages/docs/staff-guide.html)
+[担当者向けの詳しい操作ガイド](https://lime2002-esthetic.github.io/belle-pages/docs/staff-guide.html)
 
 ## 栄店の方に引き継ぐには
 
@@ -47,9 +47,9 @@
 
 1. `config/stores/new-store.json` の内容を、新しい店舗用のファイルにコピーします。たとえば大宮店は `config/stores/omiya.json` とします。
 2. 店舗名と予約ボタンの文章を変更し、最初は `enabled` を `false` にして保存します。
-3. `https://limebelleliftlaboareum26.github.io/belle-pages/editor/?store=omiya` を開きます。
+3. `https://lime2002-esthetic.github.io/belle-pages/editor/?store=omiya` を開きます。
 4. あとの情報入力・確認・登録は、担当者が上記と同じ方法で行えます。
-5. 公開先は `https://limebelleliftlaboareum26.github.io/belle-pages/?store=omiya` です。
+5. 公開先は `https://lime2002-esthetic.github.io/belle-pages/?store=omiya` です。
 
 店舗の短い名前には半角英小文字・数字・ハイフンを使います。既存店と同じ名前にしないでください。この初回準備も、必要であればCodexに依頼できます。
 
