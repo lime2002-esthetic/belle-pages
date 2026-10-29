@@ -4,22 +4,26 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <title>Belle｜ハーブピーリング</title>
-<link rel="stylesheet" href="./assets/css/style.css">
-<script src="./assets/js/store-utils.js" defer></script>
-<script src="./assets/js/site.js" defer>
+<link rel="stylesheet" href="./assets/css/style.css?v=3">
+<script src="./assets/js/store-utils.js?v=3" defer></script>
+<script src="./assets/js/site.js?v=3" defer>
 </script>
 </head>
 <body>
-<div class="preview" data-field="preview" hidden>
-</div>
 <p id="status" class="status" role="status">店舗情報を読み込んでいます。</p>
 <noscript>
 <p class="status">店舗情報を表示するには、ブラウザのJavaScriptを有効にしてください。</p>
 </noscript>
 <main hidden>
-<img src="assets/images/01-hero.png" alt="Belle メインビジュアル" loading="eager">
+<div class="price-image hero-image">
+<img src="assets/images/01-hero.png" alt="Belle ハーブピーリングのご案内" loading="eager">
+<div class="hero-price-area"><span class="price-tag">初回</span><span class="course-label" data-field="courseLabel"></span><span class="price"><b data-price="firstPrice"></b><small>円</small></span></div>
+</div>
 <div class="offer">
-<img src="assets/images/02-offer.png" alt="全顔90分 4,900円" loading="eager">
+<div class="price-image offer-image">
+<img src="assets/images/02-offer.png" alt="ハーブピーリングの施術案内" loading="eager">
+<div class="offer-price-area"><p class="regular">通常料金 <span data-price="regularPrice"></span>円</p><p class="course" data-field="courseLabel"></p><p class="price"><b data-price="firstPrice"></b><small>円</small></p></div>
+</div>
 </div>
 <div class="cta">
 <a class="button" data-booking target="_blank" rel="noopener noreferrer">WEB予約はこちら</a>
@@ -30,7 +34,10 @@
 <img src="assets/images/04-about-peeling.png" alt="ハーブピーリングとは" loading="lazy">
 <img src="assets/images/05-cases.jpg" alt="症例写真" loading="lazy">
 <img src="assets/images/06-needle.jpg" alt="針成分の説明" loading="lazy">
-<img src="assets/images/07-comparison.png" alt="比較表" loading="lazy">
+<div class="price-image comparison-image">
+<img src="assets/images/07-comparison.png" alt="ハーブピーリングの比較表" loading="lazy">
+<div class="comparison-price-area"><span>継続料金</span><b><span data-price="repeatPrice"></span>円〜</b></div>
+</div>
 <div class="cta">
 <a class="button" data-booking target="_blank" rel="noopener noreferrer">WEB予約はこちら</a>
 <a class="phone" data-phone>
