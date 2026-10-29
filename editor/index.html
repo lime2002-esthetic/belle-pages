@@ -1,50 +1,10 @@
-<!doctype html>
-<html lang="ja">
-<head>
-<meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1">
-<meta name="robots" content="noindex,nofollow"><title>Belle｜店舗情報の入力</title>
-<link rel="stylesheet" href="./editor.css">
-<script src="../assets/js/store-utils.js" defer></script><script src="./editor.js" defer></script>
-</head>
-<body>
-<header><a class="brand" href="../">Belle</a><span>店舗情報の入力</span></header>
-<main>
-<p class="eyebrow">STORE INFORMATION</p>
-<h1 id="heading">店舗情報を変更する</h1>
-<p class="lead">入力するのは店舗の情報だけ。画像とデザインはそのまま使います。</p>
-<ol class="steps"><li><b>1</b> 情報を入力</li><li><b>2</b> 表示を確認</li><li><b>3</b> ファイルを登録</li></ol>
-<p id="load-status" role="status">店舗情報を読み込んでいます。</p>
-<noscript>この入力画面はJavaScriptを有効にしてご利用ください。</noscript>
-<form id="store-form" hidden>
-<section class="card"><h2>1. 店舗の情報</h2>
-<p class="hint">公開してよい店舗の連絡先を入力してください。すべての項目を入力します。</p>
-<label>店舗名<input name="name" required maxlength="100" autocomplete="organization" placeholder="Belle栄店"></label>
-<label>住所<textarea name="address" required rows="3" autocomplete="street-address" placeholder="住所を入力してください。建物名は改行できます。"></textarea></label>
-<label>アクセス<input name="access" required maxlength="300" placeholder="〇〇駅から徒歩〇分"></label>
-<div class="two"><label>営業時間<input name="hours" required maxlength="100" placeholder="10:00～20:00"></label><label>定休日<input name="closedDays" required maxlength="100" placeholder="毎週水曜日／不定休 など"></label></div>
-<label>電話番号<input name="phone" type="tel" required maxlength="30" autocomplete="tel" placeholder="店舗の電話番号"></label>
-</section>
-<section class="card"><h2>2. 予約先と地図</h2>
-<label>WEB予約のURL<input name="bookingUrl" type="url" required placeholder="https://…" autocomplete="url"></label>
-<label>予約ボタンに表示する文章<input name="bookingLabel" required maxlength="100" placeholder="栄店のWEB予約はこちら"></label>
-<label>Googleマップ<textarea name="mapEmbedUrl" required rows="4" placeholder="Googleマップの埋め込み用URL、またはコピーしたHTMLを貼り付けてください。"></textarea></label>
-<details><summary>地図のコピー方法を見る</summary><p>Googleマップで店舗を開き、「共有」→「地図を埋め込む」→「HTMLをコピー」。コピーしたものを上の欄にそのまま貼り付けてください。「リンクを送信」の短いURLは使いません。</p></details>
-<label>公開状態<select name="enabled"><option value="false">下書きのままにする</option><option value="true">この店舗のページを公開する</option></select></label>
-<p class="hint">選択しただけでは公開されません。最後にGitHubへの登録が必要です。</p>
-</section>
-<section class="card"><h2>3. 確認して保存</h2>
-<p>先に表示を確認し、住所・予約先・電話番号・地図が正しいことを確かめてください。</p>
-<p id="form-status" role="status" aria-live="polite"></p>
-<div class="actions"><button id="preview-button" type="submit">入力した内容を確認する</button><button id="download-button" type="button" disabled>保存用ファイルをダウンロード</button></div>
-<p class="hint">入力内容はこの画面を閉じると消えます。確認後にファイルを保存してください。</p>
-</section>
-</form>
-<section id="preview-panel" class="card" hidden><h2>入力内容のプレビュー</h2><p>まだ公開されていません。下の画面は今入力した内容です。</p><dl id="preview-summary"></dl><iframe id="preview-frame" title="入力した店舗ページのプレビュー"></iframe></section>
-<section id="upload-panel" class="card" hidden><h2>最後にGitHubへ登録する</h2>
-<p id="file-instruction"></p>
-<ol class="instructions"><li>下の「GitHubの登録画面を開く」を押します。</li><li>「Drag files here…」の枠に、今ダウンロードしたファイルをドラッグします。</li><li>下の「Commit changes」で保存します。確認画面が出たら、もう一度「Commit changes」を押します。</li><li>数分待って「店舗の公開ページを開く」で内容を確認します。</li></ol>
-<div class="actions"><a id="upload-link" class="button" target="_blank" rel="noopener noreferrer">GitHubの登録画面を開く</a><a id="public-link" class="secondary" target="_blank" rel="noopener noreferrer">店舗の公開ページを開く</a></div>
-<p class="hint">GitHubにログインし、この保管場所を編集する権限が必要です。404や編集できない表示が出た場合は、管理者にアクセス権を確認してもらってください。この入力画面を開いただけでは公開内容は変わりません。</p>
-</section>
-<footer>画像・デザイン・FAQは共通です。店舗情報だけを変更します。<br><a href="../docs/staff-guide.html">担当者向けの操作ガイド</a></footer>
-</main></body></html>
+<!doctype html><html lang="ja"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="robots" content="noindex,nofollow"><title>Belle｜ページの管理</title><link rel="stylesheet" href="./editor.css?v=3"><script src="../assets/js/store-utils.js?v=3" defer></script><script src="./editor.js?v=3" defer></script></head>
+<body><header><a class="brand" href="./">Belle</a><span>ページの管理</span></header><main>
+<div id="home" hidden><p class="eyebrow">PAGE MANAGER</p><h1>店舗ページを作る・変更する</h1><p class="lead">店舗担当者の方へ。店舗情報と料金を入力し、画面の順に公開します。</p><section class="card"><h2>初めて作る</h2><p>店名や金額が空欄の雛形から、何店舗でも追加できます。</p><button id="new-page" type="button">新しい店舗のページを作る</button></section><section class="card"><h2>今あるページを変更する</h2><div class="store-links"><a href="?store=sakae">栄店の入力を続ける</a><a href="?store=shiki">志木店を変更する</a></div><label>ほかの店舗は、公開ページのURLを貼り付ける<input id="existing-url" type="url" placeholder="https://…"></label><button id="open-existing" type="button">その店舗を変更する</button><p id="home-status" role="status"></p></section></div>
+<div id="workspace" hidden><p class="eyebrow">PAGE MANAGER</p><h1 id="heading">店舗ページを作る</h1><ol class="steps"><li id="step-1" aria-current="step"><b>1</b> 入力</li><li id="step-2"><b>2</b> 確認</li><li id="step-3"><b>3</b> 公開</li></ol><p id="load-status" role="status">読み込んでいます。</p>
+<form id="store-form" hidden><section class="card"><h2>店舗情報</h2><label>店舗名<input name="name" required maxlength="100" autocomplete="organization"></label><label>住所<textarea name="address" required rows="2" autocomplete="street-address"></textarea></label><label>アクセス<input name="access" required maxlength="300"></label><div class="two"><label>営業時間<input name="hours" required maxlength="100"></label><label>定休日<input name="closedDays" required maxlength="100"></label></div><label>電話番号<input name="phone" type="tel" required maxlength="30" autocomplete="tel"></label></section>
+<section class="card"><h2>施術と料金</h2><label>施術名・時間<input name="courseLabel" required maxlength="24" placeholder="例：90分 全顔"></label><div class="three"><label>初回料金（円）<input name="firstPrice" type="number" inputmode="numeric" min="0" max="99999" step="1" required></label><label>通常料金（円）<input name="regularPrice" type="number" inputmode="numeric" min="0" max="99999" step="1" required></label><label>継続料金（円〜）<input name="repeatPrice" type="number" inputmode="numeric" min="0" max="99999" step="1" required></label></div><p class="hint">数字を変えるだけで、画像上の料金表示も変わります。画像の編集・差し替えは不要です。</p></section>
+<section class="card"><h2>予約先と地図</h2><label>WEB予約のURL<input name="bookingUrl" type="url" required placeholder="https://…"></label><label>Googleマップ<textarea name="mapEmbedUrl" required rows="3" placeholder="「地図を埋め込む」でコピーしたものを貼り付ける"></textarea></label><details><summary>地図のコピー方法</summary><p>Googleマップで店舗を開き、「共有」→「地図を埋め込む」→「HTMLをコピー」。そのまま上に貼り付けます。</p></details></section><p class="hint">入力だけでは公開されません。次に表示を確認します。</p><button type="submit">次へ：表示を確認する →</button></form>
+<section id="preview-panel" hidden><div class="card"><h2>店舗情報と料金を確認</h2><dl id="preview-summary"></dl><div class="actions"><button id="edit-again" class="sub-button" type="button">← 入力に戻る</button><button id="to-publish" type="button">次へ：公開する →</button></div></div><p class="hint">下は入力内容の確認用です。まだ公開されていません。</p><iframe id="preview-frame" title="公開前のページ確認"></iframe></section>
+<section id="publish-panel" class="card" hidden><h2>あと3つで公開できます</h2><div class="publish-step"><h3>① ファイルを保存</h3><button id="download-button" type="button">保存ファイルをダウンロード</button><p id="file-instruction" class="hint"></p></div><div class="publish-step"><h3>② GitHubに登録</h3><p>下の画面で <b>Choose your files</b> を押す → ①のファイルを選ぶ → <b>Commit changes</b> を押す。</p><a id="upload-link" class="button disabled" aria-disabled="true" target="_blank" rel="noopener noreferrer">GitHubの登録画面を開く ↗</a><details><summary>ファイルが見つからない・登録できない</summary><p>保存先は通常「ダウンロード」です。ファイル名の末尾に「(1)」が付いた場合は、①に表示された名前に戻してください。</p><p>GitHubは共通のSV用アカウントでログインします。登録先のフォルダは、このボタンで自動的に開きます。</p></details></div><div class="publish-step"><h3>③ 反映を確認</h3><p>GitHubで保存したら、数分待って押してください。</p><button id="check-published" type="button" disabled>公開できたか確認する</button><p id="publish-status" role="status" aria-live="polite"></p><a id="public-link" class="button" target="_blank" rel="noopener noreferrer" hidden>公開ページを開く ↗</a></div><div class="next-time"><h3>次回の変更も、同じ3ステップ</h3><p><a id="edit-link">この店舗の変更画面</a>をブックマークしてください。HTMLやGitHubのコード画面は開きません。</p></div><button id="back-preview" class="sub-button" type="button">← 確認に戻る</button></section>
+<p id="form-status" role="status" aria-live="polite"></p><p><a href="./">店舗を選び直す</a></p></div><noscript>この画面はJavaScriptを有効にしてご利用ください。</noscript><footer><a href="../docs/staff-guide.html">使い方を短く見る</a></footer></main></body></html>
