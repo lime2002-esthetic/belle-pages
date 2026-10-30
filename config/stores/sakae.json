@@ -1,17 +1,17 @@
 {
-  "enabled": false,
+  "enabled": true,
   "name": "Belle栄店",
   "address": [
-    ""
+    "愛知県名古屋市中区栄３-12-6 ライオンズマンション栄415号室"
   ],
-  "access": "",
-  "hours": "",
-  "closedDays": "",
-  "bookingUrl": "",
-  "mapEmbedUrl": "",
-  "phone": "",
-  "courseLabel": "",
-  "firstPrice": null,
-  "regularPrice": null,
-  "repeatPrice": null
+  "access": "栄駅 徒歩6分",
+  "hours": "11:00-19:30",
+  "closedDays": "不定休",
+  "phone": "0120-985-932",
+  "courseLabel": "90分 全顔",
+  "firstPrice": 5980,
+  "regularPrice": 18000,
+  "repeatPrice": 14000,
+  "bookingUrl": "http://b.hpr.jp/kr/hp/H000792029",
+  "mapEmbedUrl": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d52185.69998922249!2d136.86311676953122!3d35.16643950000001!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x600371676d49d319%3A0xf9d1a51fe2cb8234!2z44CQ5q-b56m0772c44OP44O844OW44OU44O844Oq44Oz44Kw44CR6Z-T5Zu96IKM566h55CGQmVsbGXmoIQ!5e0!3m2!1sja!2sjp!4v1793331016458!5m2!1sja!2sjp"
 }
