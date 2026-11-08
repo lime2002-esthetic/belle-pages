@@ -3,6 +3,22 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
+<!-- Google Tag Manager (Belle栄店) -->
+<script>
+(() => {
+  const query = new URLSearchParams(window.location.search);
+  if (query.get('store') !== 'sakae' || query.get('preview') === '1') return;
+
+  window.dataLayer = window.dataLayer || [];
+  window.gtag = function gtag() { window.dataLayer.push(arguments); };
+  window.gtag('js', new Date());
+
+  const script = document.createElement('script');
+  script.async = true;
+  script.src = 'https://www.googletagmanager.com/gtm.js?id=GTM-KVX44WKZ';
+  document.head.appendChild(script);
+})();
+</script>
 <title>Belle｜ハーブピーリング</title>
 <link rel="stylesheet" href="./assets/css/style.css?v=3">
 <script src="./assets/js/store-utils.js?v=3" defer></script>
